@@ -1,0 +1,42 @@
+
+
+
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+// https://www.onlinegdb.com/online_c++_compiler
+
+// TODO: add map, heaps etc.
+
+#include <iostream>
+#include <queue>
+#include <vector>
+#include <climits>
+using std::vector;
+using std::priority_queue;
+using std::endl;
+
+auto hcmp = [](const vector<int>& a, const vector<int> b) {
+    return a[1] < b[1];
+};
+
+int main()
+{
+    std::cout<<"Hello World" << INT_MAX <<endl;
+    
+    
+    priority_queue<vector<int>, vector<vector<int> >, decltype(hcmp) > pq{hcmp};
+    pq.push({9,10});
+    std::cout<<pq.top()[0] << "," << pq.top()[1] << endl;
+    pq.push({7,15});
+    std::cout<<pq.top()[0] << "," << pq.top()[1] << endl;
+    pq.push({12,12});
+    std::cout<<pq.top()[0] << "," << pq.top()[1] << endl;
+
+    return 0;
+};
