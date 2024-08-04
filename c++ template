@@ -5,8 +5,7 @@
 Write your code in this editor and press "Run" button to compile and execute it.
 
 
-// https://www.onlinegdb.com/online_c++_compiler
-not working for format:
+https://www.onlinegdb.com/online_c++_compiler //not working for format:
 https://coliru.stacked-crooked.com/
 https://cpp.sh/
 
@@ -21,10 +20,10 @@ https://cpp.sh/
 #include <string>
 #include <tuple>
 #include <utility>
-#include <set> // lower_bound, insert, erase
-#include <multiset>  // 
+#include <set> // lower_bound, insert, erase;  multiset: find, erase
 
 // #include <format>. //std::cout << std::format("Hello {}!\n", "world");
+// print logs: be careful it. or it->; how to handle print in each return for dfs;
 
 #include <ranges>
 using std::vector;
@@ -33,6 +32,8 @@ using std::endl;
 using std::cout;
 using std::pair;
 using std::stringstream; // stringstream ss; ss << 100 << ' ' << 200; cout << ss.str(); //ss>>a>>b;  dfs(ss&)
+using std::set;
+using std::multiset;
 
 
 
@@ -46,6 +47,15 @@ auto hcmp = [](const vector<int>& a, const vector<int> b) {
     return a[1] < b[1];
 };
 priority_queue<vector<int>, vector<vector<int> >, decltype(hcmp) > pq{hcmp};
+
+
+   const auto data = {1, 8, 5, 6, 3, 4, 0, 9, 7, 2};
+    struct
+    {
+        bool operator()(const int l, const int r) const { return l > r; }
+    } customLess;
+    std::priority_queue custom_priority_queue(data.begin(), data.end(), customLess);
+    
 */
 
 /*
@@ -53,7 +63,6 @@ priority_queue<vector<int>, vector<vector<int> >, decltype(hcmp) > pq{hcmp};
 */
 int main()
 {
-   
 
     return 0;
 };
