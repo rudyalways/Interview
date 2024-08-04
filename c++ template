@@ -4,9 +4,16 @@
                Code, Compile, Run and Debug C++ program online.
 Write your code in this editor and press "Run" button to compile and execute it.
 
+
+// https://www.onlinegdb.com/online_c++_compiler
+not working for format:
+https://coliru.stacked-crooked.com/
+https://cpp.sh/
+
 *******************************************************************************/
 
 #include <iostream>
+#include <sstream>      // std::stringstream
 #include <queue>
 #include <vector>
 #include <climits>
@@ -14,12 +21,20 @@ Write your code in this editor and press "Run" button to compile and execute it.
 #include <string>
 #include <tuple>
 #include <utility>
+#include <set> // lower_bound, insert, erase
+#include <multiset>  // 
+
+// #include <format>. //std::cout << std::format("Hello {}!\n", "world");
+
+#include <ranges>
 using std::vector;
 using std::priority_queue;
 using std::endl;
 using std::cout;
 using std::pair;
-// https://www.onlinegdb.com/online_c++_compiler
+using std::stringstream; // stringstream ss; ss << 100 << ' ' << 200; cout << ss.str(); //ss>>a>>b;  dfs(ss&)
+
+
 
 // TODO: add map, heaps etc.
 // multiset
@@ -33,8 +48,12 @@ auto hcmp = [](const vector<int>& a, const vector<int> b) {
 priority_queue<vector<int>, vector<vector<int> >, decltype(hcmp) > pq{hcmp};
 */
 
+/*
+    for (std::tuple<int&, std::string&, char&> elem : std::views::zip(x, y, z))
+*/
 int main()
 {
+   
 
     return 0;
 };
